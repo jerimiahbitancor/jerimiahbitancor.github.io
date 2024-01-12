@@ -1,0 +1,127 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Montserrat';
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .logo {
+  color: rgb(0, 0, 0);
+  font-family: Dancing Script;
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.nav {
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 15px 20px;
+  color: rgb(0, 0, 0);
+  border-radius: 50px;
+  font-family: Poppins;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.nav:hover {
+  background-color: #153738;
+  color: rgb(255, 255, 255);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(chaptersbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  gap: 150px;
+}
+
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+}
+
+.container .card .img-contain {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #02622d, transparent);
+  border-radius: 20px;
+}
+
+.container .card .img-contain img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: opacity 0.5s;
+}
+
+.container .card:hover .img-contain img {
+  opacity: 0;
+}
+
+.container .card .cartoonme {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  filter: drop-shadow(8px 5px 8px rgba(0, 0, 0, 0.4));
+  opacity: 0;
+  transform: translateY(0);
+  transition: 0.5s;
+}
+
+.container .card:hover .cartoonme {
+  opacity: 1;
+  transform: translateY(-25%)
+}
+
+.card h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 70%;
+  transform: translateX(-50%);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: Poppins, Montserrat;
+  font-weight: 800PX;
+  letter-spacing: 1px;
+  background: #15a355;
+  width: 80%;
+  text-align: center;
+  padding: 5px 20px;
+  border-radius: 10px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.card:hover h1 {
+  bottom: 40px;
+  opacity: 1;
+}
